@@ -16,9 +16,9 @@
         </li>
       </ul>
     </div>
-    
+
     <div class="game-list-container">
-      <h2 class="section-header">Waiting:</h2>
+      <h2 class="section-header">Waiting for other players</h2>
       <ul class="game-list unstyled">
         <li ng-repeat="game in playerGames | filter:{currentTurn: 'false'}" class="game-list-entry">
           <a href="#/gameWaiting" class="game-list-entry-link">
