@@ -16,9 +16,9 @@
         </li>
       </ul>
     </div>
-
+    
     <div class="game-list-container">
-      <h2 class="game-list-header">Waiting:</h2>
+      <h2 class="section-header">Waiting:</h2>
       <ul class="game-list unstyled">
         <li ng-repeat="game in playerGames | filter:{currentTurn: 'false'}" class="game-list-entry">
           <a href="#/gameWaiting" class="game-list-entry-link">
@@ -33,6 +33,6 @@
   </div>
 
   <div class="span3 offset1">
-    <a href="#/join" class="new-game-button"><i class="icon-plus-sign icon-white"></i> New game</a>
+    <a href="#/join" class="new-game-button"><i class="icon-plus icon-white pull-right"></i> New game</a>
   </div>
 </div>

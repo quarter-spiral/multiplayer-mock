@@ -16,7 +16,6 @@
   position:absolute;
   top:10px;
   left:10px;
-  background-color: #EEE;
   .main-navigation-entry {
     display:none;
     &:first-child {
@@ -26,8 +25,11 @@
       display:block;
       padding:15px 20px;
       cursor:pointer;
+      color:#FFF;
+      font-weight:bold;
+      background-color: rgba(150,200,255,0.8);
       &:hover {
-        background-color: #DDD;
+        background-color: rgba(120,180,230,1);
       }
       .main-navigation-entry-label {
         margin-left: 10px;
@@ -38,6 +40,7 @@
   &:hover {
     .main-navigation-entry {
       display:block;
+      background-color: rgba(150,200,255,1);
     }
     .main-navigation-entry-link {
       .main-navigation-entry-label {
@@ -92,18 +95,11 @@ a {
 
 
 .game-list-container {
-  margin:0 0 10px 0;
-}
-
-.game-list-header {
-  font-size:1em;
-  font-weight: normal;
-  color:#999;
-  margin:0;
+  margin:0 0 30px 0;
 }
 
 .game-list {
-  background-color: #EEE;
+  border: 1px solid #DDD;
 }
 
 .game-list-entry {
@@ -176,7 +172,32 @@ a {
 
 
 .custom-map-form {
-  background-color: #EEE;
+  border: 1px solid #DDD;
   padding:30px;
   margin-top: -20px;
+}
+
+
+
+
+.friends-list {
+  border: 1px solid #DDD;
+  padding:10px 20px;
+  margin-top: -20px;
+}
+
+.friends-list-header {
+  font-size: 1em;
+  margin:0;
+}
+
+.friends-list-entry {
+  margin:8px 0;
+}
+
+.friends-list-tip {
+  font-style: italic;
+  font-size: 0.9em;
+  color:#666;
+  margin-top: 15px;
 }

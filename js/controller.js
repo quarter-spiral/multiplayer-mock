@@ -34,6 +34,14 @@ function gamesCrtl($scope) {
     {name:'Awsome'}
   ]
 
+  $scope.friends = [
+    {name:'John'},
+    {name:'Kevin'},
+    {name:'Jane'},
+    {name:'Karen'},
+    {name:'Sebastian'}
+  ]
+
 }
 
 gamesCrtl.$inject = ['$scope'];
