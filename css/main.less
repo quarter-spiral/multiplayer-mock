@@ -4,6 +4,48 @@
    Author's custom styles
    ========================================================================== */
 
+.section-header {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+
+
+.main-navigation {
+  position:absolute;
+  top:10px;
+  left:10px;
+  background-color: #EEE;
+  .main-navigation-entry {
+    display:none;
+    &:first-child {
+      display:block;
+    }
+    .main-navigation-entry-link {
+      display:block;
+      padding:15px 20px;
+      cursor:pointer;
+      &:hover {
+        background-color: #DDD;
+      }
+      .main-navigation-entry-label {
+        margin-left: 10px;
+        display: none;
+      }
+    }
+  }
+  &:hover {
+    .main-navigation-entry {
+      display:block;
+    }
+    .main-navigation-entry-link {
+      .main-navigation-entry-label {
+        display: inline;
+      }
+    }
+  }
+}
 
 
 
@@ -17,6 +59,124 @@
 
 
 
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.new-game-button, .create-custom-game-link, .create-game-link {
+  display:block;
+  background-color: #6E0;
+  padding:25px 20px;
+  color:#FFF;
+  font-weight: bold;
+  &:hover {
+    background-color: #3D0;
+    color:#FFF;
+  }
+}
+
+
+.waiting-for-label {
+  color:#999;
+  display: block;
+}
+
+.pace-label {
+  display: block;
+}
 
 
 
+
+
+.game-list-container {
+  margin:0 0 10px 0;
+}
+
+.game-list-header {
+  font-size:1em;
+  font-weight: normal;
+  color:#999;
+  margin:0;
+}
+
+.game-list {
+  background-color: #EEE;
+}
+
+.game-list-entry {
+
+}
+
+.game-list-entry-link {
+  display:block;
+  padding:15px 20px;
+  i {
+    display:none;
+  }
+  &:hover {
+    background-color: #36F;
+    color:#FFF;
+    i {
+      display:block;
+    }
+  }
+}
+
+
+.pace-tabs, .map-tabs, .game-type-tabs {
+  margin:0;
+}
+
+.map-tabs, .game-type-tabs {
+  margin-bottom: 20px;
+}
+
+.pace-tab, .map-tab, .game-type-tab {
+  display: inline-block;
+  padding:10px 20px;
+  background-color: #FFF;
+  margin:0px;
+  cursor:pointer;
+}
+
+.pace-tab.active, .map-tab.active, .game-type-tab.active {
+  background-color: #36F;
+  color:#FFF;
+}
+
+
+
+
+
+
+
+
+.map-list {
+}
+
+.map-list-entry {
+  display: block;
+  height:100px;
+  line-height: 100px;
+  margin-bottom: 20px;
+  background-color: #EEE;
+  text-align: center;
+}
+
+.map-list-entry-link {
+  
+}
+
+
+
+
+
+
+.custom-map-form {
+  background-color: #EEE;
+  padding:30px;
+  margin-top: -20px;
+}

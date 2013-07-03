@@ -1,0 +1,59 @@
+<div class="row">
+
+  <div class="span3 offset1">
+
+    <h2 class="section-header">Opponents</h2>
+
+    <div ng-init="gameType = 'anybody'" class="game-type-tabs">
+      <a ng-click="gameType = 'anybody'; useCustomMap = false;" class="game-type-tab" ng-class="{active:gameType == 'anybody'}">Random</a>
+      <a ng-click="gameType = 'friendsOnly'" class="game-type-tab" ng-class="{active:gameType == 'friendsOnly'}">Friends</a>
+    </div>
+
+    <h2 class="section-header">Ready?</h2>
+
+    <a href="#/game" class="create-game-link"><i class="icon-ok icon-white"></i> Play first turn</a>
+
+  </div>
+
+
+  <div class="span6 offset1">
+
+    <h1 class="section-header">Map</h1>
+
+    <div ng-init="useCustomMap = false;" class="map-tabs" ng-show="gameType == 'friendsOnly'">
+      <a ng-click="useCustomMap = false;" class="map-tab" ng-class="{active:useCustomMap == false}">Default</a>
+      <a ng-click="useCustomMap = true;" class="map-tab" ng-class="{active:useCustomMap == true}">Custom</a>
+    </div>
+
+    <div class="row">
+      <ul ng-hide="useCustomMap" class="map-list unstyled">
+        <li ng-repeat="map in defaultMaps" class="span2 map-list-entry">
+          <a ng-click="" class="map-list-entry-link">{{map.name}} map</a>
+        </li>
+      </ul>
+    </div>
+
+    <form ng-show="useCustomMap" class="form custom-map-form" ng-init="customMapType = 'url'">
+      <label class="radio">
+        <input type="radio" name="optionsRadios" id="optionsRadios1" ng-model="customMapType" value="url">
+        Use a remote map URL
+      </label>
+      <label class="radio">
+        <input type="radio" name="optionsRadios" id="optionsRadios2" ng-model="customMapType" value="json">
+        Enter map JSON directly
+      </label>
+      <hr />
+      <div ng-show="customMapType == 'url'">
+        <label>Map URL</label>
+        <input type="text" placeholder="Enter a map url" class="input-block-level" />
+      </div>
+      <div ng-show="customMapType == 'json'">
+        <label>Map JSON</label>
+        <textarea rows="10" class="input-block-level" placeholder="Paste in map json from a 3rd party"></textarea>
+      </div>
+    </form>
+
+  </div>
+
+
+</div>
